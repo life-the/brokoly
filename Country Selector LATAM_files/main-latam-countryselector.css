@@ -1,0 +1,489 @@
+/* Estilos Mobile */
+
+@media screen and (max-width: 320px) {
+
+  section h2 span.heading-en,
+  section p.lead span.heading-en {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  header {
+    width: 100%;
+    height: auto;
+    padding: 14px 10px;
+    margin: 0 0 30px 0;
+    background: #ffffff;
+  }
+  header .container,
+  header .col-xs-12 {
+    padding: 0;
+  }
+  header a {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  header .logo-ow-link {
+    vertical-align: top;
+    padding: 10px 0 0 0;
+  }
+  header .logo-latam-cs {
+    width: 152px;
+    height: 48px;
+  }
+  header .logo-ow-cs {
+    width: 28px;
+    height: 28px;
+    margin-left: 35px;
+  }
+  section h1 {
+    margin-top: 0;
+  }
+  section p.lead span.heading-en {
+    display: block;
+  }
+  .cs-others {
+    margin-top: 50px;
+  }
+  .cs-others-heading {
+    font-family: "Latam-Sans-Regular",Trebuchet MS,Arial,sans-serif;
+    font-size: 1.286em;
+    color: #666666;
+    margin: 0 0 30px 0;
+  }
+  footer {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    margin-top: 50px;
+    background: #1b0088;
+    border-top: 3px solid #ed1650;
+    overflow: hidden;
+  }
+  footer .footer-brand {
+    text-align: center;
+    padding: 0 0 18px 0;
+  }
+  footer .footer-brand img {
+    width: 158px;
+    height: 36px;
+  }
+  footer .footer-copyArea p {
+    color: #bfbfbf;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+}
+
+
+/* Estilos Tablet */
+
+
+@media (max-width: 959px) and (min-width: 768px) {
+
+  header {
+    width: 100%;
+    height: auto;
+    padding: 14px 10px;
+    margin: 0 0 30px 0;
+    background: #ffffff;
+  }
+  header .container {
+    padding: 0;
+  }
+  header a {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  header .logo-ow-link {
+    vertical-align: top;
+    padding: 10px 0 0 0;
+  }
+  header .logo-latam-cs {
+    width: 152px;
+    height: 48px;
+  }
+  header .logo-ow-cs {
+    width: 28px;
+    height: 28px;
+    margin-left: 35px;
+  }
+  
+  section h1, h2 {
+    margin-top: 0;
+  }
+  section .cs-box h2 {
+    font-size: 1.714em;
+
+  }
+  section p.lead {
+    font-size: 1.714em;
+    margin-bottom: 30px;
+  }
+  
+  section div.cs-box div.col-sm-6:first-child,
+  section div.cs-box div.col-sm-6:nth-child(2) {
+    height: 347px;
+  }
+  section div.cs-box div.col-sm-6:nth-child(5) {
+    margin-top: 30px;
+  }
+  .cs-others {
+    margin-top: 50px;
+  }
+  .cs-others-heading {
+    font-family: "Latam-Sans-Regular",Trebuchet MS,Arial,sans-serif;
+    font-size: 1.000em;
+    color: #666666;
+    margin: 0 20px 0 0; 
+  }
+  .cs-others h2,
+  .cs-others ul {
+    display: inline-block;
+  }
+    .cs-others ul.other-sites li {
+      display: inline-block;
+      margin: 0 0 0 20px; 
+    }
+    .cs-others ul.other-sites li:first-child {
+      margin: 0; 
+    }
+
+  footer {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    margin-top: 36px;
+    background: #1b0088;
+    border-top: 3px solid #ed1650;
+    overflow: hidden;
+  }
+  footer .footer-brand {
+    text-align: center;
+    padding: 0;
+  }
+  footer .footer-brand img {
+    width: 158px;
+    height: 36px;
+  }
+  footer .footer-copyArea,
+  footer .footer-copyArea .col-sm-12 {
+    padding: 0;
+  }
+  footer .footer-copyArea p {
+    color: #bfbfbf;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 8px 0;
+  }
+}
+
+
+/* Estilos Desktop */
+
+
+@media (min-width: 960px) {
+
+  header {
+    width: 100%;
+    height: auto;
+    padding: 14px 10px;
+    margin: 0 0 30px 0;
+    background: #ffffff;
+  }
+  header .container {
+    padding: 0;
+  }
+  header a {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  header .logo-ow-link {
+    vertical-align: top;
+    padding: 10px 0 0 0;
+  }
+  header a.logo-ow-link:focus {
+    outline: none;
+  }
+    header a.logo-ow-link:focus img {
+    outline: 2px solid #1b0088;
+    outline-offset: 2px;
+  }
+  header .logo-latam-cs {
+    width: 152px;
+    height: 48px;
+  }
+  header .logo-ow-cs {
+    width: 28px;
+    height: 28px;
+    margin-left: 35px;
+  }
+  section h1 {
+    margin-bottom: 0;
+  }
+  section h1, h2 {
+    margin-top: 0;
+  }
+  section .cs-box h2 {
+    font-size: 1.500em;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  section p.lead {
+    font-size: 1.714em;
+    margin-bottom: 40px;
+  }
+  section div.cs-box div.col-md-3:nth-child(1) span:nth-child(3),
+  section div.cs-box div.col-md-3:nth-child(2) span:nth-child(3),
+  section div.cs-box div.col-md-3:nth-child(5) span:nth-child(3) {
+    display: block;
+  }
+  section div.cs-box div.col-md-3:nth-child(5) {
+    margin-top: 30px;
+  }
+  section div.cs-box ul.cs-list-block li a:hover {
+    text-decoration: none;
+  }
+    section div.cs-box ul.cs-list-block li a:hover span.cs-text {
+      text-decoration: underline;
+    }
+  section div.cs-box ul.cs-list-block li a:focus {
+    display: block;
+  }
+
+  .cs-others {
+    margin-top: 40px;
+  }
+  .cs-others-heading {
+    font-family: "Latam-Sans-Regular",Trebuchet MS,Arial,sans-serif;
+    font-size: 1.000em;
+    color: #666666;
+    margin: 0 20px 0 0; 
+  }
+  .cs-others h2,
+  .cs-others ul {
+    display: inline-block;
+  }
+    .cs-others ul.other-sites li {
+      display: inline-block;
+      margin: 0 0 0 20px; 
+    }
+    .cs-others ul.other-sites li:first-child {
+      margin: 0; 
+    }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    margin-top: 36px;
+    background: #1b0088;
+    border-top: 3px solid #ed1650;
+    overflow: hidden;
+  }
+  footer .container {
+    padding: 0;
+  }
+  footer .footer-brand {
+    text-align: right;
+    padding: 0;
+  }
+  footer .footer-brand img {
+    width: 158px;
+    height: 36px;
+  }
+  footer div.footer-copyArea,
+  footer div.footer-copyArea .col-md-12 {
+    padding: 0;
+  }
+  footer .footer-copyArea p {
+    color: #bfbfbf;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 0 6px 0;
+  }
+
+}
+
+/* clases banderas */
+
+.cs-list-block {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0
+}
+.cs-list-block a {
+  text-decoration: none;
+}
+.cs-list-block  li {
+  margin-bottom: 15px;
+}
+.cs-list-block li:last-child {
+  margin: 0;
+}
+.cs-list-block:last-child {
+  margin: 0
+}
+.other-sites li {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.other-sites li:last-child {
+  margin: 0; 
+}
+.cs-list-block .logo-cargo-cs {
+  width: 101px;
+  height: 31px;
+}
+.cs-list-block .logo-empresas-cs {
+  width: 158px;
+  height: 12px;
+}
+.cs-flagIcon {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  vertical-align: middle;
+}
+.cs-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 10px;
+}
+
+.ar {
+  background-image: url(../images/cs-sprite.png);
+  background-position: 0px 0px;
+  width: 30px;
+  height: 20px;
+}
+.au {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -30px -60px;
+  width: 30px;
+  height: 20px;
+}
+.br {
+  background-image: url(../images/cs-sprite.png);
+  background-position: 0px -20px;
+  width: 30px;
+  height: 20px;
+}
+.ca {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -30px -20px;
+  width: 30px;
+  height: 20px;
+}
+.cl {
+  background-image: url(../images/cs-sprite.png);
+  background-position: 0px -40px;
+  width: 30px;
+  height: 20px;
+}
+.co {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -30px -40px;
+  width: 30px;
+  height: 20px;
+}
+.de {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -60px 0px;
+  width: 30px;
+  height: 20px;
+}
+.ec {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -60px -20px;
+  width: 30px;
+  height: 20px;
+}
+.es {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -60px -40px;
+  width: 30px;
+  height: 20px;
+}
+.eu {
+  background-image: url(../images/cs-sprite.png);
+  background-position: 0px -60px;
+  width: 30px;
+  height: 20px;
+}
+.fr {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -60px -60px;
+  width: 30px;
+  height: 20px;
+}
+.it {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -90px 0px;
+  width: 30px;
+  height: 20px;
+}
+.mx {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -90px -20px;
+  width: 30px;
+  height: 20px;
+}
+.nz {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -90px -40px;
+  width: 30px;
+  height: 20px;
+}
+.otros_paises {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -90px -60px;
+  width: 30px;
+  height: 20px;
+}
+.pe {
+  background-image: url(../images/cs-sprite.png);
+  background-position: 0px -80px;
+  width: 30px;
+  height: 20px;
+}
+.pr {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -30px -80px;
+  width: 30px;
+  height: 20px;
+}
+.ue {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -60px -80px;
+  width: 30px;
+  height: 20px;
+}
+.uk {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -90px -80px;
+  width: 30px;
+  height: 20px;
+}
+.uy {
+  background-image: url(../images/cs-sprite.png);
+  background-position: -30px 0px;
+  width: 30px;
+  height: 20px;
+}

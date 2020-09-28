@@ -1,0 +1,89 @@
+(function (){
+  function findParentByTagName(element, tagName) {
+    var parent = element;
+    while (parent !== null && parent.tagName !== tagName.toUpperCase()) {
+      parent = parent.parentNode;
+    }
+    return parent;
+  }
+
+  function getDomain() {
+    var host = window.location.host,
+      port = host.indexOf(':'),
+      parts,
+      length,
+      domain;
+    if (port !== -1) {
+      host = host.slice(0, port);
+    }
+    domain = host;
+    if (domain.startsWith('www')) {
+       domain = domain.replace("www", "");
+    } else if (domain === 'localhost') {
+      domain = '';
+    }
+    return domain;
+  }
+
+  function getExpiration( seconds ) {
+    if ( !seconds ) return '';
+    var dateValue = new Date(Date.now() + (seconds*1000));
+    var resultDate = "expires=" + dateValue.toUTCString() + ";";
+    return resultDate;
+  }
+
+  function getCookie( name ) {
+    if (!name) { return null; }
+    return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(name).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+  }
+
+  function getCookieObject( name ) {
+    if (!name) { return null; }
+    var i = 0,
+      cookieArray = getCookie( name ).split('&'),
+      len = cookieArray.length,
+      cookieObject = {};
+    for ( ; i < len; i++ ) {
+      cookieArray[i] = cookieArray[i].split('=');
+      cookieObject[cookieArray[i][0]] = cookieArray[i][1];
+    }
+    return cookieObject;
+  }
+
+  function setCookie( name, value, expirationTime, domain ) {
+    if (!name) { return false; }
+    document.cookie = name + '=' + value + ";" + getExpiration( expirationTime ) + "path=/; domain=" + domain + ";";
+  }
+
+  function countrySelector(valor_cookie, homeinfo, valorB2C) {
+    var dDate = new Date();
+    var pcom_date = parseInt(Date.UTC(dDate.getUTCFullYear(),dDate.getUTCMonth(),dDate.getUTCDate(),dDate.getUTCHours(),dDate.getUTCMinutes(),dDate.getUTCSeconds(),dDate.getUTCMilliseconds())/1000);
+    var expiration = 60*60*24;
+    setCookie('pcom', valor_cookie, expiration, getDomain());
+    setCookie('homeInfo', homeinfo, expiration, getDomain());
+    setCookie('pcom_date', pcom_date, expiration, getDomain());
+    setCookie('pcom_new_home1', "1", expiration, getDomain());
+    setCookie('pcom_new_home2', "1", expiration, getDomain());
+    setCookie('stop_mobi', "yes", 1, getDomain());
+    setCookie('B2CVGN', valorB2C, expiration, getDomain());
+  }
+
+  var changeCountry = function(e){
+    var ancor = findParentByTagName(e.target, 'A'),
+        currentB2cCookie = getCookieObject('B2CVGN'),
+        valor_cookie = ancor.getAttribute('data-pcom'),
+        homeinfo = ancor.getAttribute('data-homeinfo'),
+        homeinfoSplit = homeinfo.split('_'),
+        countryUpper = homeinfoSplit[1].toUpperCase(),
+        valorB2C = 'v-locale=' + homeinfoSplit[1] + '_' + countryUpper + '&v-pais=' + countryUpper +
+                   '&v-cidade=' + currentB2cCookie['v-cidade'] + '&v-estado=' + currentB2cCookie['v-estado'];
+    countrySelector(valor_cookie, homeinfo, valorB2C);
+  }
+
+  var links = document.querySelectorAll('.country-link');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function(e) {
+      changeCountry(e);
+    });
+  }
+})();
